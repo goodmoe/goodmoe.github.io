@@ -42,4 +42,17 @@
   <br>
     <mdui-linear-progress></mdui-linear-progress>
   </br>
-</html>
+  <br>
+    <mdui-dialog close-on-overlay-click class="example-overlay">解决方法：win+q 搜索 设备管理器-->通用串行总线控制器-->将USB根集线器（USB3.0）或可扩展主机控制器右键属性【电源管理】，取消勾选“允许关闭此设备而节约电源”，重启生效<br>Windows 默认开启了【节电模式】，致使USB接口zhi供电不足，使USB接口间歇性失灵。
+打开—【设备管理器】（【开始】—【运行】中输入【devmgmt.msc】回车即可打开设备管理器），双击【通用串行总线控制器】—【USB Root Hub】双击任意一个，打开属性对话框，切换到【电源管理】选 项卡，去除【允许计算机关闭这个设备以节约电源】前的勾选，点击确定返回，依次将每个【USB RootHub】的属性都修改完后重新启动电脑
+</mdui-dialog>
+  
+    <mdui-button>USB拔插提示音解决方法</mdui-button>
+    
+    <script>
+      const dialog = document.querySelector3(".example-overlay");
+      const openButton = dialog.nextElementSibling3;
+    
+      openButton.addEventListener3("click", () => dialog.open = true);
+    </script>
+  </html>
